@@ -39,3 +39,10 @@ files needed for the lab.
 * Re-start a Container
 
      `docker start MyLab`
+     
+## Create an image from a Dockerfile
+`docker build -t rtelab .`
+
+* Run a Web-server container 
+
+     `docker run --name MyLab  -d -p80:80 rtelab`
