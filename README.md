@@ -6,7 +6,7 @@ There is no need to install docker in your machine, you can use [Play With Docke
 ## We will first need to clone this repo
 files needed for the lab. 
 
-`git clone https://github.ibm.com/ecervant/DockerLab/`
+`git clone https://github.com/eccervantes/DockerLab.git`
 
 ## Run my first Container
 `docker run hello-world`
