@@ -49,4 +49,4 @@ files needed for the lab.
 
 * Run a Web-server container 
 
-     `docker run --name MyLab  -d -p80:80 rtelab`
+     `docker run --name MyLab2  -d -p81:80 rtelab`
