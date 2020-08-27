@@ -24,7 +24,7 @@ files needed for the lab.
      
      - Click on the link that have the "80" in Play With Docker
      
-     - Go to [localhost:80](http://localhost:80) (if your a running the lab in your machine)
+     - Go to [localhost:80](http://localhost:80) (if your are running the lab in your machine)
      
 * Lets copy a file into the container to modify the output.
 
