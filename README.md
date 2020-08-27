@@ -2,7 +2,6 @@
 Our goal is to make you feel comfortable enough to start using docker by yourself.
 
 There is no need to install docker in your machine, you can use 
-- [Play With Docker IBM](http://pwd.dst.ibm.com), just click "START"
 
 - [Play With Docker Public](https://labs.play-with-docker.com/), login and then click "START"
 
@@ -11,6 +10,8 @@ There is no need to install docker in your machine, you can use
 files needed for the lab. 
 
 `git clone https://github.com/eccervantes/DockerLab.git`
+
+`cd DockerLab`
 
 ## Run my first Container
 `docker run hello-world`
