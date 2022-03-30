@@ -51,3 +51,13 @@ files needed for the lab.
 * Run a Web-server container 
 
      `docker run --name MyLab2  -d -p81:80 rtelab`
+
+#  Challenge #1
+
+use the knowledge you have gotten so far:
+
+* go to the Docker101 folder and unzip the app.zip file
+* create an image with a custom tag using the Dockerfile in the "Docker101" folder
+* spin the image in deatached mode and map it to the port 3000. 
+* add a few new items to the list.
+
