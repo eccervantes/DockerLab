@@ -70,4 +70,13 @@ use the knowledge you have gotten so far:
 * recreate the image from the docker file
 * sping the image and verify your changes
 
+## 3
+
+* create a dockerhub repository 
+* push the modified image that includes your custom message to be shared. 
+     * make sure you login ´docker login -u YOUR-USER-NAME´
+     * tag your image properly to uploaded to your newly created repository
+          * ´docker tag docker-101 YOUR-USER-NAME/101-todo-app´
+     * push the image and share
+ 
 
