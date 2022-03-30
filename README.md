@@ -80,5 +80,7 @@ use the knowledge you have gotten so far:
           *  `docker tag docker-101 YOUR-USER-NAME/101-todo-app`
      * push the image and share
           *  `docker push YOUR-USER-NAME/101-todo-app`
+     * Run a Shared image example:
+          * `docker run -dp 3000:3000 eccervantes/101-todo-app:latest`  
  
 
