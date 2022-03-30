@@ -83,4 +83,36 @@ use the knowledge you have gotten so far:
      * Run a Shared image example:
           * `docker run -dp 3000:3000 eccervantes/101-todo-app:latest`  
  
+## Making Data persistent (volumes and bind mount)
+
+### volumes
+
+Lests create a volume
+
+`docker volume create todo-db`
+
+lets create a new instance and attached the volume to the path /etc/todos
+
+`docker run -dp 3000:3000 -v todo-db:/etc/todos docker-101`
+
+* Insert some data
+* delete the container 
+* run the above command again and check if the data your previously enter is there. 
+
+* Where is my data store?
+     * `docker volume inspect`
+     
+### Bind mounts
+
+lets run the following command:
+
+`docker run -dp 3000:3000 \
+    -w /app -v $PWD:/app \
+    node:10-alpine \
+    sh -c "yarn install && yarn run dev"`
+
+wait a couple of seconds and modify the line 109 of the src/static/js/app.js file 
+
+refresh the page and your changes will be reflected. 
+
 
