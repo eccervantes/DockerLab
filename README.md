@@ -52,7 +52,8 @@ files needed for the lab.
 
      `docker run --name MyLab2  -d -p81:80 rtelab`
 
-#  Challenge #1
+#  Challenge 
+## 1
 
 use the knowledge you have gotten so far:
 
@@ -60,4 +61,13 @@ use the knowledge you have gotten so far:
 * create an image with a custom tag using the Dockerfile in the "Docker101" folder
 * spin the image in deatached mode and map it to the port 3000. 
 * add a few new items to the list.
+
+## 2
+
+* In the ~/app/src/static/js/app.js file, update line 56 to use the new empty text
+     * modify "No items yet!" for a personal custum message that will be displayed when the list is empty.
+
+* recreate the image from the docker file
+* sping the image and verify your changes
+
 
