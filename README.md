@@ -72,11 +72,12 @@ use the knowledge you have gotten so far:
 
 ## 3
 
-* create a dockerhub repository 
+* create a dockerhub repository name 101-todo-app
 * push the modified image that includes your custom message to be shared. 
      * make sure you login ´docker login -u YOUR-USER-NAME´
      * tag your image properly to uploaded to your newly created repository
-          * ´docker tag docker-101 YOUR-USER-NAME/101-todo-app´
+          *  ´ docker tag docker-101 YOUR-USER-NAME/101-todo-app ´
      * push the image and share
+          *  ´docker push YOUR-USER-NAME/101-todo-app ´
  
 
