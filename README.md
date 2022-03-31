@@ -149,7 +149,7 @@ if you are able to see the todo DB you are ready to go.
 * lets copy the following code to a file named "dockercompose.yaml"
 
 ```
-version: "3.8"
+version: "3.3"
 
 services:
   app:
