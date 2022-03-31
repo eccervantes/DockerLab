@@ -106,13 +106,28 @@ lets create a new instance and attached the volume to the path /etc/todos
 
 lets run the following command:
 
-`docker run -dp 3000:3000 \
-    -w /app -v $PWD:/app \
-    node:10-alpine \
-    sh -c "yarn install && yarn run dev"`
+`docker run -dp 3000:3000 -w /app -v $PWD:/app node:10-alpine sh -c "yarn install && yarn run dev"`
 
 wait a couple of seconds and modify the line 109 of the src/static/js/app.js file 
 
 refresh the page and your changes will be reflected. 
 
+## Multi Container app
 
+### Starting MYSQL
+
+* Create the Network
+
+`docker network create todo-app`
+
+* Start a MySQL caontainer and attach it to the network
+
+`docker run -d --network todo-app --network-alias mysql -v todo-mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=todos mysql:5.7 `
+
+* To confirm we have the database up and running connec to the database and verify it connects.
+
+`docker exec -it <mysql-container-id> mysql -p`
+
+Use the following password **secret** and then list all the databases `SHOW DATABASES;`
+
+if you are able to see the todo DB you are ready to go. 
