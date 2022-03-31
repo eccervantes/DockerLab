@@ -182,7 +182,7 @@ volumes:
 
 * make sure there are not other container running and then execute the following comand:
 
-´docker-compose up -d´
+`docker-compose up -d`
 
 * check everything is working as expected and then you can stop the deployment by:
 
