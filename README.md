@@ -124,10 +124,66 @@ refresh the page and your changes will be reflected.
 
 `docker run -d --network todo-app --network-alias mysql -v todo-mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=todos mysql:5.7 `
 
-* To confirm we have the database up and running connec to the database and verify it connects.
+* To confirm we have the database up and running connect to the database and verify it connects.
 
 `docker exec -it <mysql-container-id> mysql -p`
 
 Use the following password **secret** and then list all the databases `SHOW DATABASES;`
 
 if you are able to see the todo DB you are ready to go. 
+
+### Connecting our app to the DB
+
+* Specify each of the enviroment variables above, as well as connect the container to our app network. 
+    
+`docker run -dp 3000:3000 -w /app -v "$(pwd):/app" --network todo-app -e MYSQL_HOST=mysql -e MYSQL_USER=root -e MYSQL_PASSWORD=secret -e MYSQL_DB=todos node:12-alpine sh -c "yarn install && yarn run dev" `
+
+* verify the app is up and running by checking the logs `docker logs CONTAINERID`
+* Enter a few data on the application
+* make sure the data is being saved in MySQL container 
+
+`docker exec -it <mysql-container-id> mysql -p todos`
+
+## Docker compose
+
+* lets copy the following code to a file named "dockercompose.yaml"
+
+```
+version: "3.8"
+
+services:
+  app:
+    image: node:12-alpine
+    command: sh -c "yarn install && yarn run dev"
+    ports:
+      - 3000:3000
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_DB: todos
+
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - todo-mysql-data:/var/lib/mysql
+    environment: 
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: todos
+
+volumes:
+  todo-mysql-data:
+```
+
+* Take a moment to read all the information that is present and try to match it to what we previously had worked. 
+
+* make sure there are not other container running and then execute the following comand:
+
+´docker-compose up -d´
+
+* check everything is working as expected and then you can stop the deployment by:
+
+`docker-compose down`
