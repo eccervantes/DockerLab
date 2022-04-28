@@ -1,4 +1,4 @@
-# Welcome to the RTE Docker Lab
+# Welcome to Docker Lab 🐋
 Our goal is to make you feel comfortable enough to start using docker by yourself.
 
 There is no need to install docker in your machine, you can use 
