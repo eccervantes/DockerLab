@@ -187,3 +187,7 @@ volumes:
 * check everything is working as expected and then you can stop the deployment by:
 
 `docker-compose down`
+
+## Cheat Sheet
+
+[Cheat Sheet](https://dockerlabs.collabnix.com/docker/cheatsheet/)
