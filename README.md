@@ -31,7 +31,7 @@ files needed for the lab.
 
      `docker cp index.html MyLab:/usr/share/nginx/html/`
      
-     `docker cp IBMlogo.png MyLab:/usr/share/nginx/html/`
+     `docker cp EPAMlogo.png MyLab:/usr/share/nginx/html/`
      
 * verify the changes on your browser
 
