@@ -146,7 +146,7 @@ if you are able to see the todo DB you are ready to go.
 
 ## Docker compose
 
-* lets copy the following code to a file named "dockercompose.yaml"
+* lets copy the following code to a file named "docker-compose.yaml"
 
 ```
 version: "3.3"
